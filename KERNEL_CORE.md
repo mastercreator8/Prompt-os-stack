@@ -76,4 +76,30 @@ When a task is received:
 2. select reasoning mode
 3. route to appropriate module(s)
 4. combine outputs
-5. execute or return result
+5. execute or return result---
+
+## MASTER COMMAND INTERFACE
+
+/mega [task]
+
+Acts as the primary control command for the Prompt OS.
+
+Function:
+- interpret the task
+- classify task type
+- select reasoning mode
+- route to appropriate modules
+- synthesise output
+- return clear, actionable result
+
+---
+
+## COMMAND EXECUTION FLOW
+
+1. receive task
+2. classify (strategy / research / execution / creative / decision)
+3. select reasoning mode
+4. route to modules
+5. generate output
+6. refine via feedback loop
+7. return final answer
