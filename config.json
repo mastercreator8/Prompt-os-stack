@@ -1,0 +1,11 @@
+{
+  "model_strategy": {
+    "default": "cheap",
+    "escalation": "premium",
+    "threshold": 0.7
+  },
+  "rules": {
+    "cost_first": true,
+    "kill_threshold": 0.3
+  }
+}
