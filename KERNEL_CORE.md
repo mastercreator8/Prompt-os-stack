@@ -1,4 +1,4 @@
-# PROMPT OS — KERNEL CORE
+8# PROMPT OS — KERNEL CORE
 
 ## CORE INTELLIGENCE LOOP
 Observe → Interpret → Reason → Plan → Act → Evaluate → Learn
@@ -51,4 +51,29 @@ Observe → Interpret → Reason → Plan → Act → Evaluate → Learn
 ## SYSTEM RULE
 - clarity over complexity
 - execution over theory
-- integration over duplication
+- integration over duplication---
+
+## MODULE CONNECTIONS
+
+The kernel routes tasks to the following modules:
+
+- decision-engine → decision making
+- execution-engine → task execution
+- memory-system → knowledge storage
+- evolution-engine → system improvement
+- automation-layer → automation workflows
+- product-engine → product/app creation
+- monetisation-engine → revenue strategy
+- distribution-engine → growth and reach
+
+---
+
+## ROUTING LOGIC
+
+When a task is received:
+
+1. classify task type
+2. select reasoning mode
+3. route to appropriate module(s)
+4. combine outputs
+5. execute or return result
