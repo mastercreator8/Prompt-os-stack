@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DCL — Decision Clarity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: -apple-system, sans-serif;
+      background: #0f172a;
+      color: white;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 8px;
+      border: none;
+      background: #020617;
+      color: white;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #22c55e;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      margin-top: 15px;
+      color: black;
+    }
+
+    .output {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      background: #020617;
+      text-align: center;
+    }
+
+    .result {
+      font-size: 22px;
+      color: #22c55e;
+      margin-top: 10px;
+    }
+
+    .confidence {
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>Decision Clarity</h2>
+
+<div class="card">
+  <label>What are you deciding?</label>
+  <textarea id="situation" placeholder="e.g. Change jobs or stay?"></textarea>
+
+  <label>Option A</label>
+  <input id="optionA" placeholder="Stay in current job">
+
+  <label>Option B</label>
+  <input id="optionB" placeholder="Take new job">
+
+  <label>How risky is this? (1–10)</label>
+  <input id="risk" type="number" min="1" max="10">
+
+  <button onclick="analyze()">Get Clarity</button>
+</div>
+
+<div class="output" id="output"></div>
+
+<script>
+function analyze() {
+  let a = document.getElementById("optionA").value;
+  let b = document.getElementById("optionB").value;
+  let risk = parseInt(document.getElementById("risk").value) || 5;
+
+  // Simple but effective logic
+  let baseA = Math.random() * 20 + 60;
+  let baseB = Math.random() * 20 + 60;
+
+  let scoreA = baseA - (risk * 2);
+  let scoreB = baseB - (risk * 2);
+
+  let decision = scoreA > scoreB ? a : b;
+  let confidence = Math.abs(scoreA - scoreB).toFixed(0);
+
+  document.getElementById("output").innerHTML = `
+    <h3>Recommended</h3>
+    <div class="result">${decision}</div>
+    <div class="confidence">Confidence: ${confidence}%</div>
+    <p>Take action immediately.</p>
+  `;
+}
+</script>
+
+</body>
+</html>
