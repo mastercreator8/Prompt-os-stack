@@ -1,0 +1,11 @@
+SYSTEM LOOP
+
+1. Define task
+2. Plan approach
+3. Execute
+4. Evaluate result
+5. Decide:
+   - kill
+   - improve
+   - scale
+6. Log outcome
